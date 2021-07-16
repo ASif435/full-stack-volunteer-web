@@ -8,6 +8,10 @@ var ObjectID = require('mongodb').ObjectID;
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+// use heroku want se
+const cool = require('cool-ascii-faces');
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(cors());
 const port = 5000;
